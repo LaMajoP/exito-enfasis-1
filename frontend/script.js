@@ -36,38 +36,6 @@ async function cargarProductos(){
 
 }
 
-async function agregarProducto(){
-
-    const producto={
-
-        nombre:"Producto prueba",
-
-        precio:"$10000",
-
-        precio_lista:"$12000",
-
-        url:"https://www.exito.com",
-
-        imagen:"https://picsum.photos/200"
-
-    };
-
-    await fetch(`${API}/productos`,{
-
-        method:"POST",
-
-        headers:{
-            "Content-Type":"application/json"
-        },
-
-        body:JSON.stringify(producto)
-
-    });
-
-    cargarProductos();
-
-}
-
 document
 .getElementById("btnCargar")
 .onclick=cargarProductos;
