@@ -23,4 +23,4 @@ echo "Presiona Ctrl+C para detener todo."
 
 trap "kill $BACKEND_PID $FRONTEND_PID 2>/dev/null" SIGINT SIGTERM
 
-wait|
+wait
